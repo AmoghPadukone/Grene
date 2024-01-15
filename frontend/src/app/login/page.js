@@ -31,6 +31,7 @@ export default function SignIn() {
     signInWithRedirect(auth, provider);
   }
 
+
   return (
     <>
       <button onClick={() => signIn()}>Sign In</button>
