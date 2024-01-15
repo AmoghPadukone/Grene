@@ -9,7 +9,7 @@ export default function Home() {
   // imprort components here
   return (
     <main>
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <Steps />
       <Sources />
