@@ -1,7 +1,6 @@
 import { Inter, MuseoModerno } from "next/font/google";
 import "./globals.css";
 
-// const inter = Inter({ subsets: ["latin"] });
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,12 +14,7 @@ const museoModerno = MuseoModerno({
   variable: "--curvy-font",
 });
 
-// const museoModerno = MuseoModerno({
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-//   style: ["normal", "italic"],
-//   subsets: ["latin"],
-//   display: "swap",
-// });
+
 
 export const metadata = {
   title: "Create Next App",
