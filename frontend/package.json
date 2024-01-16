@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^14.0.4",
+    "@react-hook/media-query": "^1.1.1",
     "@tremor/react": "^3.13.1",
     "firebase": "^10.7.1",
     "firebase-admin": "^12.0.0",
