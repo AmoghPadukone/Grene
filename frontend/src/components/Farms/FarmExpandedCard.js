@@ -7,34 +7,19 @@ import ProfitPill from '@/components/Farms/ProfitPill';
 import { MdSunny } from "react-icons/md";
 import { BsGraphUp } from "react-icons/bs";
 import { FaPercentage } from "react-icons/fa";
-
 import ReserveGrid from '../Reserve/ReserveGrid';
-
-import {
-  Card,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/card";
-
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import BuyCard from '../Buy/BuyCard';
+import { useRouter } from 'next/navigation';
+
 
 export default function FarmExpandedCard({ source, projectDescription, title, company, currency, minInv, profitPillDesc }) {
-
-  const [open, setOpen] = React.useState(false);
-
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
   const data = [
     { icon: <MdSunny color='white' size={28} />, title: "CAPACITY", quantity: "343 KW" },
     { icon: <BsGraphUp color='white' size={28} />, title: "CAPACITY", quantity: "343 KW" },
@@ -58,8 +43,8 @@ export default function FarmExpandedCard({ source, projectDescription, title, co
         <Heading size="sm" className='max-md:text-[16px] font-light'>Min Investment <span className='font-bold'>{currency}{minInv}</span>/unit</Heading>
       </div>
 
-      {/* carousel */}
-
+      {/* Carousel (if needed) */}
+      
       {/* About */}
       <Heading size="md">
         About the project
@@ -78,19 +63,22 @@ export default function FarmExpandedCard({ source, projectDescription, title, co
       <OverviewCard data={data} />
 
       {/* Reserve Source */}
-        {/* <div className="block md:hidden">
-          <Drawer open={open} onOpenChange={setOpen}>
-            <DrawerTrigger asChild>
-            </DrawerTrigger>
-            <DrawerContent>
-              <BuyCard />
-            </DrawerContent>
-          </Drawer>
-        </div> */}
+      {/* Mobile Drawer Component (Uncomment if needed) */}
+      {/* <div className="block md:hidden">
+        <Drawer open={open} onOpenChange={setOpen}>
+          <DrawerTrigger asChild>
+            <Button className="w-full p-2 my-4">  Reserve {source}</Button>
+          </DrawerTrigger>
+          <DrawerContent>
+            <BuyCard />
+          </DrawerContent>
+        </Drawer>
+      </div> */}
 
-        <Button className="w-full p-2 my-4">  Reserve {source}</Button>
-
-    
+      {/* Button for Desktop */}
+      <div className="hidden md:block">
+        <Button onClick={()=>(router.push('/buy'))} className="w-full p-2 my-4">  Reserve {source}</Button>
+      </div>
     </Card>
   );
 }
