@@ -16,6 +16,8 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "embla-carousel-react": "8.0.0-rc19",
+    "@next/font": "^14.0.4",
+    "@react-hook/media-query": "^1.1.1",
     "firebase": "^10.7.1",
     "firebase-admin": "^12.0.0",
     "next": "14.0.4",
