@@ -9,7 +9,7 @@ import {
 
 export default function FarmCard({ thumbnail, thumbnail_description, company, currency, minInv, title }) {
     return (
-        <Card className="flex flex-col p-2">
+        <Card className="flex flex-col p-2 w-[20em] my-5">
             <div className='w-full '>
                 <img src={thumbnail} alt={thumbnail_description} className='rounded-lg object-fit ' />
             </div>
