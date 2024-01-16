@@ -1,9 +1,14 @@
 import React from 'react'
-import PrimitiveCard from '../Primitives/PrimitiveCard'
+
+import {
+    Card,
+    CardDescription,
+    CardTitle,
+} from "@/components/ui/card"
 
 function StatsHolder({icon,title,quantity}){
     return(
-        <div className='flex gap-3 m-4'>
+        <Card className='flex gap-3 p-2 m-4'>
             <div className='bg-[#32C8DD] flex justify-center items-center rounded-md p-4'>
                 {icon}
             </div>
@@ -12,22 +17,22 @@ function StatsHolder({icon,title,quantity}){
                 <span className='text-[#7B7B7B] text-[16px]'>{title}</span>
                 <span className='text-[24px] font-semibold'>{quantity}</span>
             </div>
-        </div>
+        </Card>
     )
 }
 
 
 export default function OverviewCard({data}) {
   return (
-    <PrimitiveCard radius="md" className="p-2">
+    <Card className="p-2">
         {
-            data.map((data)=>{
+            data.map((data,index)=>{
                 return(
-                    <StatsHolder icon={data.icon} title={data.title} quantity={data.quantity} />
+                    <StatsHolder icon={data.icon} title={data.title} quantity={data.quantity} index={index} />
                 )
             })
         }
-    </PrimitiveCard>
+    </Card>
 
   )
 }

@@ -1,5 +1,8 @@
 "use client";
 import React, { useState } from 'react';
+import {
+  Card,
+} from "@/components/ui/card"
 
 export default function ReserveGrid() {
   const price = 20;
@@ -19,8 +22,8 @@ export default function ReserveGrid() {
   };
 
   return (
-    <div className='p-3'>
-    <div className='grid max-w-md grid-cols-5 grid-rows-5 gap-3 '>
+    <Card className='w-full max-w-md p-2'>
+    <div className='grid max-w-md grid-cols-5 grid-rows-5 gap-1 '>
 
       {Array.from({ length: 25 }, (_, index) => (
         <div
@@ -36,6 +39,6 @@ export default function ReserveGrid() {
 
     </div>
       <span className='w-full text-3xl font-bold'>Total : ${sum}</span>
-      </div>
+      </Card>
   );
 }
