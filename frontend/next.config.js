@@ -1,3 +1,8 @@
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {}
+
+// module.exports = nextConfig
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
@@ -11,7 +16,13 @@ const nextConfig = {
         FIREBASE_MESSAGING_SENDER_ID: process.env.FIREBASE_MESSAGING_SENDER_ID,
         FIREBASE_APP_ID: process.env.FIREBASE_APP_ID,
         FIREBASE_MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID,
-    }
-}
+    },
+  experimental: {
+    appDir: true,
+    fontLoaders: [
+      { loader: "@next/font/google", options: { subsets: ["latin"] } },
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
