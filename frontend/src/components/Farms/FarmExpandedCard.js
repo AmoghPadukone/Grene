@@ -3,22 +3,24 @@ import FilterPill from './FilterPill'
 import Heading from '../Primitives/Heading'
 import OverviewCard from '@/components/Farms/OverviewCard'
 import ProfitPill from '@/components/Farms/ProfitPill'
-
+import PrimitiveCard from '../Primitives/PrimitiveCard'
+import { MdSunny } from "react-icons/md";
+import { BsGraphUp } from "react-icons/bs";
+import { FaPercentage } from "react-icons/fa";
 
 export default function FarmExpandedCard({source,projectDescription,title,company,currency,minInv,profitPillDesc}) {
     const data = [
-        {icon:"Sun",title:"CAPACITY",quantity:"343 KW"},
-        {icon:"Sun",title:"CAPACITY",quantity:"343 KW"},
-        {icon:"Sun",title:"CAPACITY",quantity:"343 KW"},
+        {icon:<MdSunny color='white' size={28}/>,title:"CAPACITY",quantity:"343 KW"},
+        {icon:<BsGraphUp color='white' size={28}/>,title:"CAPACITY",quantity:"343 KW"},
+        {icon:<FaPercentage color='white' size={28}/>,title:"CAPACITY",quantity:"343 KW"},
+
     ]
 
     return (
-    <div>
-                <div className='flex flex-row justify-between gap-1'>
+    <PrimitiveCard radius="lg" className="gap-4 p-4">
+                <div className='flex flex-row items-center justify-between gap-3 my-2'>
             <div>
-                <p className='font-bold text-md'>{title}</p>
-                <p className='text-[10px] font-light'>Installed by <span className='font-bold'>{company}</span> </p>
-                <p className='text-[12px] font-light'>Min Investment <span className='font-bold'>{currency}{minInv}</span>/unit</p>
+                <Heading size="lg" className="m-0">{title}</Heading>
             </div>
 
             <div className='flex flex-col items-center'>
@@ -26,6 +28,10 @@ export default function FarmExpandedCard({source,projectDescription,title,compan
             </div>
         </div>
 
+            <div className='my-2'>
+            <Heading size="sm" className='text-[10px] leading-tight font-light'>Installed by <span className='font-bold'>{company}</span> </Heading>
+                <Heading size="sm" className='max-md:text-[16px] font-light'>Min Investment <span className='font-bold'>{currency}{minInv}</span>/unit</Heading>
+            </div>
 
         {/* carousel */}
 
@@ -50,9 +56,9 @@ export default function FarmExpandedCard({source,projectDescription,title,compan
         <OverviewCard data={data} />
 
         {/* Reserve Source */}
-        <button className='bg-[#101010] p-2 rounded-md text-white'>
+        <button className='bg-[#101010] my-2 w-full mx-auto p-2 rounded-md text-white min-w-sm'>
             Reserve {source}
         </button>
-    </div>
+    </PrimitiveCard>
   )
 }

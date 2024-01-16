@@ -3,8 +3,8 @@ import PrimitiveCard from '../Primitives/PrimitiveCard'
 
 function StatsHolder({icon,title,quantity}){
     return(
-        <div className='flex gap-3'>
-            <div className='bg-[#32C8DD] rounded-sm p-2'>
+        <div className='flex gap-3 m-4'>
+            <div className='bg-[#32C8DD] flex justify-center items-center rounded-md p-4'>
                 {icon}
             </div>
 
@@ -19,7 +19,7 @@ function StatsHolder({icon,title,quantity}){
 
 export default function OverviewCard({data}) {
   return (
-    <PrimitiveCard radius="md">
+    <PrimitiveCard radius="md" className="p-2">
         {
             data.map((data)=>{
                 return(

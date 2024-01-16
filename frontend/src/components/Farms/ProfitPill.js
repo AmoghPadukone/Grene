@@ -29,7 +29,10 @@ export default function ProfitPill({  children }) {
  
   return (
     <div
-      className={`rounded-full px-8 max-w-[320px] py-2 w-fit h-fit outline outline-gray-400 outline-1 bg-[#A2DE7E] text-[#24691E]  `}>
+      className={`rounded-full flex items-center justify-center px-4 max-w-sm w-full py-[2px] my-4 h-fit outline outline-gray-400 outline-1 bg-[#A2DE7E] text-[#24691E]  `}>
+      
+      <img src="/profit_pill_icon.png" alt="electric" height={60} width={60} className='bg-center bg-no-repeat bg-cover rotate-30' />
+      
       {children}
     </div>
   );

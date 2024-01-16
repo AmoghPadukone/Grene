@@ -49,7 +49,7 @@ export default function FilterPill({  source, selectable }) {
 
   return (
     <div
-      className={`rounded-full px-8 max-w-[100px] py-2 w-fit h-fit outline outline-gray-400 outline-1  ${containerStyles}`}
+      className={`rounded-full px-2 py-1  max-w-[100px]  w-full flex items-center justify-center outline outline-gray-400 outline-1  ${containerStyles}`}
       onClick={handleClick}
     >
       {source}
