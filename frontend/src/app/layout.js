@@ -5,13 +5,11 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-
   variable: "--normal-font",
 });
 
 const museoModerno = MuseoModerno({
   subsets: ["latin"],
-
   variable: "--curvy-font",
 });
 
