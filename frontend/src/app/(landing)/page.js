@@ -15,7 +15,7 @@ export default function Home() {
       <Steps />
       <Sources />
       <HowToInvest />
-      {/* <Footer /> */}
+      <Footer />
       <Footer2 />
     </main>
   );
