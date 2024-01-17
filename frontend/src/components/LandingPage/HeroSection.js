@@ -11,20 +11,30 @@ export default function HeroSection() {
         width={500}
         height={350}
         className="pl-12"
-        style={{ zIndex: "999" }}
+        style={{ zIndex: "1" }}
+        draggable="false"
       />
       <Image
         src="/heroPattern.svg"
         alt="Hero Pattern"
         width={1200}
         height={800}
-        className="absolute right-0 top-0 z-1"
+        className="absolute right-0 top-0 "
+        style={{ zIndex: "-1" }}
+        draggable="false"
       />
       <h1 className="text-5xl text-center font-curvy">
         Your one stop for investing <br />
         in renewable parks
       </h1>
-      <Image src="/button.svg" alt="Button" width={300} height={200} />
+      <Image
+        src="/button.svg"
+        alt="Button"
+        width={300}
+        height={200}
+        draggable="false"
+        className="hover:cursor-pointer hover:scale-105  transition-all  active:scale-95"
+      />
     </div>
   );
 }
