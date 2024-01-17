@@ -11,7 +11,7 @@ export default function Steps() {
 //patch code cause i am running short on time... sorry shivam 💋
 function StepsDesktop() {
   return (
-    <div className="h-full pb-[5%] px-[10vw]">
+    <div className="h-full py-[12%] px-[10vw]">
       <div className="text-6xl pb-[10%] lg:pb-[2%] tracking-wider text-center font-[600] font-curvy">
         {" "}
         Investments are hard. We simplify it.
@@ -24,14 +24,14 @@ function StepsDesktop() {
             draggable="false"
             src="/steps.png"
             alt="solar curve banner"
-            width={500}
+            width={350}
             // fill={true}
             // sizes="(max-width: 768px) 100%, (max-width: 1200px) 50vw, 33vw"
-            height={350}
+            height={200}
           />
         </div>
-        <div className="righty text-3xl lg:text-4xl 2xl:text-5xl w-[60%] xl:w-[50%]  pl-[5%] my-auto flex flex-col gap-20 xl:gap-28">
-          <div id="point1" className=" font-curvy flex flex-row gap-10">
+        <div className="righty text-2xl lg:text-4xl 2xl:text-4xl w-[60%] xl:w-[50%]  pl-[5%] my-auto flex flex-col gap-20 xl:gap-28">
+          <div id="point1" className="font-curvy flex flex-row gap-10">
             <div id="number" className="font-semibold font-curvy my-auto">
               1
             </div>
