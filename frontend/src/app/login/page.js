@@ -6,11 +6,11 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { UserAuthForm } from "@/app/login/components/AuthForm"
-
-
+import { auth } from "@/lib/firebase-config";
+import { useRouter } from "next/navigation";
 
 export default function SignIn() {
-
+  const router = useRouter();
 
 
   return (

@@ -1,13 +1,13 @@
-// "use client";
-// import { useRouter } from "next/navigation";
+"use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function Navbar({ contentList }) {
-  // const router = useRouter();
+  const router = useRouter();
 
   return (
-    <nav className="absolute top-0  z-50 left-0 flex items-center justify-between w-full px-8 py-2 mb-3 bg-transparent max-md:px-4">
+    <nav className="absolute top-0 left-0 z-50 flex items-center justify-between w-full px-8 py-2 mb-3 bg-transparent max-md:px-4">
       <div>
         <img src="/Grene.svg" />
       </div>

@@ -8,6 +8,8 @@ export async function middleware(request, response) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
+
+  
   //Call the authentication endpoint
   const responseAPI = await fetch("/api/login", {
     headers: {
