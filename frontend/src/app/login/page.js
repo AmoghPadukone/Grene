@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
+
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { UserAuthForm } from "@/app/login/components/AuthForm"
@@ -14,31 +15,17 @@ export default function SignIn() {
 
   return (
     <>
-      <div className="container relative flex   h-[800px] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+      <div className="container overflow-y-hidden relative flex h-[100vh] flex-col align-middle items-center justify-center md:grid lg:max-w-none lg:grid-col-1 lg:px-0 ">
+      <Image
+                src="/loginBG.svg"
+                alt="Hero Logo"
+                width={800}
+                height={800}
+                className="absolute translate-[-50%,-50%] left-[25%]"
+              />
   
-        <div className="relative flex-col hidden h-full p-10 text-white bg-muted lg:flex dark:border-r">
-          <div className="absolute inset-0 bg-zinc-900" />
-          <div className="relative z-20 flex items-center text-lg font-medium">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-6 h-6 mr-2"
-            >
-              <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
-            </svg>
-            Grene
-          </div>
-          <div className="relative z-20 mt-auto">
-        
-          </div>
-        </div>
-        <div className="lg:p-8">
-          <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+        <div className="lg:p-8 bg-white rounded-xl shadow-2xl" style={{zIndex:"99"}}>
+          <div className="mx-auto py-8 flex w-full flex-col justify-around space-y-16 sm:w-[350px]">
             <div className="flex flex-col space-y-2 text-center">
               <h1 className="text-2xl font-semibold tracking-tight">
                 Create an account
