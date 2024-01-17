@@ -43,3 +43,14 @@
     margin-top: -1%;
   }
 }
+
+/* FOOTER STYLES */
+
+.spacer img {
+  aspect-ratio: 960/100;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
